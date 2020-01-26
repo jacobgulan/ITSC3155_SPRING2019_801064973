@@ -28,7 +28,6 @@ def array2d_2_hash contact_info, contacts
     contacts.each do |key, value|
       h[key][:email] = contact_info[i][0]
       h[key][:phone] = contact_info[i][1]
-      
       i += 1
     end
     return h
@@ -38,5 +37,27 @@ end
 # Part III
 def hash_2_array contacts
     # YOUR CODE HERE
+    if (contacts.length == 0)
+        return[[],[],[]]
+    end
+    emails = []
+    phones []
+    names = []
+    i = 0
+    
+    contacts.each do |key, value|
+      emails[i] = contacts[key][:email]
+      phones[i] = contacts[key][:phone]
+      i += 1
+    end
+    
+    i = 0
+    contacts.keys.each do |key|
+        names[i] = key.to_s
+        i += 1
+    end
+    
+    array = [emails, phones, names]
+    return array
     
 end
