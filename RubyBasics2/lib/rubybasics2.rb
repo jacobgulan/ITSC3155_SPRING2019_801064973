@@ -28,4 +28,8 @@ end
 # Part III
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if (s =~ /^[10]*00$/ || s == "0")
+    return true
+  end
+  return false
 end
